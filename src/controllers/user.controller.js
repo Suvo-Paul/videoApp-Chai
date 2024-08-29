@@ -33,7 +33,7 @@ const registerUser = asyncHandler(async (req, res) => {
     const avatar = await uploadOnCloudinary(avatarLocalPath)
     const coverImage = await uploadOnCloudinary(coverImageLocalPath)
 
-    if (avatar === null) {
+    if (!avatar) {
         throw new ApiError(400, "Avatar file is required")
     }
 
@@ -59,4 +59,4 @@ const registerUser = asyncHandler(async (req, res) => {
     )
 })
 
-export default { registerUser }
+export { registerUser }

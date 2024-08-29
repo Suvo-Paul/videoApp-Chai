@@ -12,9 +12,8 @@ const uploadOnCloudinary = async (localFilePath) => {
         if (!localFilePath) return null
 
         const response = await cloudinary.uploader.upload(localFilePath, {
-            resource_type: 'auto',
-            timeout: 120000
-        })
+            resource_type: "auto"
+        });
 
         // console.log("File is iploaded on cloudinary", response.url);
 
