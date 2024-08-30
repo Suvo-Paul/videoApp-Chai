@@ -6,7 +6,7 @@ import { app } from "./app.js"
 
 dotenv.config({ path: "./.env" })
 
-const PORT = process.env.PORT || 8001
+const PORT = process.env.PORT || 7001
 
 connectDB()
     .then(() => {
